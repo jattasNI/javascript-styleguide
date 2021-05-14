@@ -85,6 +85,12 @@ module.exports = {
         'max-len': 'off',
 
         /*
+            JavaScript alert, confirm, and prompt functions should be used for debugging purposes only
+            as they are obtrusive and have poor customizability.
+        */
+        'no-alert': 'error',
+
+        /*
             Errors from this rule will identify issues more often than not. However, there may be
             unique exceptions, like bad third-party API design, where this rule can be disabled
             with an inline comment.
@@ -95,6 +101,32 @@ module.exports = {
             Console logs should not be exposed in production environments.
         */
         'no-console': 'error',
+
+        /*
+            `continue` statements can improve readability but care should be taken to avoid confusing control flow.
+            They should generally be the only statement within an `if` block and should never use labels.
+        */
+        'no-continue': 'off',
+
+        /*
+            Constant expressions in conditions are likely an error. Cases representing an infinite loop
+            may utilize the construct `for (;;) {}`.
+        */
+        'no-constant-condition': 'error',
+
+        /*
+            Disallow duplicate conditions in if-else-if chain.
+            This rule does not need to be explicitly set after enabled in airbnb:
+            https://github.com/airbnb/javascript/blob/1eadb93e377da1e56c3f91f26610e5d0a00738a9/packages/eslint-config-airbnb-base/rules/errors.js#L44
+        */
+        'no-dupe-else-if': 'error',
+
+        /*
+            Disallow assigning to imported bindings.
+            This rule does not need to be explicitly set after enabled in airbnb:
+            https://github.com/airbnb/javascript/blob/5641278fa1df75ba3b6af2959a553bd682c0ad42/packages/eslint-config-airbnb-base/rules/errors.js#L83
+        */
+        'no-import-assign': 'error',
 
         /*
             There may be exceptions, like array iterators, where it is appropriate to disable this
@@ -173,6 +205,13 @@ module.exports = {
                 message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
             }],
 
+        /*
+            Disallow returning values from setters.
+            This rule does not need to be explicitly set after enabled in airbnb:
+            https://github.com/airbnb/javascript/blob/5641278fa1df75ba3b6af2959a553bd682c0ad42/packages/eslint-config-airbnb-base/rules/errors.js#L121
+        */
+        'no-setter-return': 'error',
+
         /**
             Underscore prefixes are permitted only to indicate fields that are for private internal
             use. Trailing or prefixed underscores that signify other use cases are not allowed.
@@ -211,6 +250,12 @@ module.exports = {
             shorthands, so they should be corrected in review.
         */
         'object-shorthand': ['error', 'properties', { avoidQuotes: true }],
+
+        /*
+            Destructuring should be considered for multi-variable declarations and assignments while simple single
+            variable declarations and assignments likely don't require it.
+        */
+        'prefer-destructuring': 'off',
 
         /*
             This configuration already supports the JSDoc syntax. Add additional syntax as line or
