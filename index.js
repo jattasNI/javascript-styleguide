@@ -1,12 +1,13 @@
 module.exports = {
     extends: [
-        /*
-            airbnb-base source:
-            https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/index.js
-        */
         'airbnb-base'
     ],
     rules: {
+        /*
+            Overrides to airbnb rules:
+            https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/index.js
+        */
+
         /*
             Omit arrow function parenthesis where they are not required to improve readability.
         */
@@ -25,6 +26,14 @@ module.exports = {
             may be used if preferred.
         */
         'comma-dangle': ['error', 'only-multiline'],
+
+        /*
+            'default-case' Airbnb rule configuration notes:
+            Always provide a `default` case in `switch` statements.
+            If the default case is logically unreachable, throw an Error.
+            If the default case should do nothing, add a comment explaining why
+            to indicate that it is an intentional decision.
+        */
 
         /*
             Do not require a newline at the end of every file in favor of reducing the effort to
@@ -152,7 +161,7 @@ module.exports = {
             allowSamePrecedence: true
         }],
 
-        /**
+        /*
             This rule disallows assigning to function parameters; function parameters are
             treated as const bindings. Some more readable or type-safe alternatives to
             parameter assignment are:
@@ -161,7 +170,7 @@ module.exports = {
          */
         'no-param-reassign': ['error', { props: false }],
 
-        /**
+        /*
             Prefer the '+=' operator. Allow unary operators in for loops, because it is a common
             pattern.
          */
@@ -212,7 +221,7 @@ module.exports = {
         */
         'no-setter-return': 'error',
 
-        /**
+        /*
             Underscore prefixes are permitted only to indicate fields that are for private internal
             use. Trailing or prefixed underscores that signify other use cases are not allowed.
             Different guidelines may exist for languages that support private fields, such as
@@ -220,6 +229,13 @@ module.exports = {
             fields changes in the JavaScript ecosystem.
          */
         'no-underscore-dangle': 'off',
+
+        /*
+            Unused variables are not allowed as they're usually an indication of a programming error.
+            In situations where they are required like unused callback function arguments,
+            indicate that the unused variable is intentional by pre-pending its name with _.
+        */
+        'no-unused-vars': ['error', { vars: 'all', args: 'all', argsIgnorePattern: '^_', ignoreRestSiblings: true }],
 
         /*
             Migrating from var is not trivial, so there may be exceptions for older projects.
