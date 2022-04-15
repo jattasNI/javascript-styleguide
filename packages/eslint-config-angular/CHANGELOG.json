@@ -1,0 +1,107 @@
+{
+  "name": "@ni/eslint-config-angular",
+  "entries": [
+    {
+      "date": "Fri, 07 Jan 2022 16:15:18 GMT",
+      "tag": "@ni/eslint-config-angular_v3.3.1",
+      "version": "3.3.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-typescript to v3.0.5",
+            "commit": "975043b3da174b4cea3f7ba468827a75ced61e7f"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Fri, 07 Jan 2022 01:54:08 GMT",
+      "tag": "@ni/eslint-config-angular_v3.3.0",
+      "version": "3.3.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "commit": "ab8e85b31ffa555af7e4ded4d840f781ed79680e",
+            "comment": "Disable @angular-eslint/component-max-inline-declarations in tests"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Fri, 07 Jan 2022 01:15:45 GMT",
+      "tag": "@ni/eslint-config-angular_v3.2.2",
+      "version": "3.2.2",
+      "comments": {
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-typescript to v3.0.4",
+            "commit": "ad15c411b01f306d07e4aa7d5b06dbbd9177de90"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Tue, 09 Nov 2021 18:23:18 GMT",
+      "tag": "@ni/eslint-config-angular_v3.2.0",
+      "version": "3.2.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "molly.kreis@ni.com",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Don't require i18n attributes to have custom IDs",
+            "commit": "e4eed9978948e04ce51a4e20c7c841e688433fc5"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Thu, 28 Oct 2021 15:59:19 GMT",
+      "tag": "@ni/eslint-config-angular_v3.1.0",
+      "version": "3.1.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Add new config for rules requiring type checking and disable 3 rules in tests",
+            "commit": "772f17b65e83107fd8682087c87b9619a5c2ea38"
+          },
+          {
+            "author": "jattasNI@users.noreply.github.com",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Disable max-classes-per-file for Angular tests",
+            "commit": "772f17b65e83107fd8682087c87b9619a5c2ea38"
+          },
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-typescript to v3.0.2",
+            "commit": "772f17b65e83107fd8682087c87b9619a5c2ea38"
+          }
+        ]
+      }
+    },
+    {
+      "date": "Wed, 29 Sep 2021 22:10:29 GMT",
+      "tag": "@ni/eslint-config-angular_v3.0.1",
+      "version": "3.0.1",
+      "comments": {
+        "patch": [
+          {
+            "author": "beachball",
+            "package": "@ni/eslint-config-angular",
+            "comment": "Bump @ni/eslint-config-typescript to v3.0.1",
+            "commit": "2eefa5b8f9bd3e68031cdb0e928cd97254a45ba6"
+          }
+        ]
+      }
+    }
+  ]
+}
